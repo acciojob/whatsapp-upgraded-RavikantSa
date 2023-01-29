@@ -63,11 +63,6 @@ public class WhatsappRepository {
             groupsDb.put(groupName,users);
 
         }
-        // int numberOfGroups = groupsDb.size()+1;
-
-
-
-        //    }
         Group group = new Group();
         group.setName(groupName);
         group.setNumberOfParticipants(numberOfparticipants);
@@ -79,8 +74,8 @@ public class WhatsappRepository {
         // Return the message id.
         Message message =new Message();
         int id = messagesDb.size();
-        id=id+1;
-        message.setId(id);
+//        id=id+1;
+        message.setId(++id);
         message.setContent(content);
         message.setTimestamp(new Date());
 
